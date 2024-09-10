@@ -29,7 +29,6 @@ public class Book {
     private Publisher publisher;
 
     public Book(){
-        super();
     }
 
     public Book(String title, String genre){

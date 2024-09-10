@@ -6,7 +6,6 @@ import com.booleanuk.api.models.Publisher;
 import com.booleanuk.api.repository.AuthorRepository;
 import com.booleanuk.api.repository.BookRepository;
 import com.booleanuk.api.repository.PublisherRepository;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
