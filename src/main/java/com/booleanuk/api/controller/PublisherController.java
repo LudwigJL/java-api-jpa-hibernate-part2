@@ -34,7 +34,6 @@ public class PublisherController {
         return new ResponseEntity<Publisher>(this.publisherRepository.save(publisher), HttpStatus.CREATED);
     }
 
-
     @PutMapping("{id}")
     public ResponseEntity<Publisher> updatePublisher(@PathVariable int id, @RequestBody Publisher publisher) {
         Publisher publisherToUpdate = this.publisherRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Not Found"));
@@ -52,8 +51,5 @@ public class PublisherController {
         this.publisherRepository.delete(publisherToDelete);
         return ResponseEntity.ok(publisherToDelete);
     }
-
-
-
 
 }

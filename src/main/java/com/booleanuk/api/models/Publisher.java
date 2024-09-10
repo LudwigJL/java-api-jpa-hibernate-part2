@@ -19,7 +19,7 @@ public class Publisher {
     @Column(name = "location")
     private String location;
 
-    @OneToMany(mappedBy = "publisher")
+    @OneToMany(mappedBy = "publisher", fetch = FetchType.EAGER)
     @JsonIgnoreProperties("publisher")
     private List<Book> books;
 
@@ -32,7 +32,10 @@ public class Publisher {
     }
 
     public Publisher(){
-        super();
+    }
+
+    public Publisher(int id){
+        this.id = id;
     }
 
     public Publisher(String name, String location){

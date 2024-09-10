@@ -18,7 +18,7 @@ public class Book {
     @Column(name = "genre")
     private String genre;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "author_id", nullable = false)
     @JsonIncludeProperties(value = {"first_name", "last_name", "email", "alive"})
     private Author author;

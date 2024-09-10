@@ -27,7 +27,7 @@ public class Author {
     @Column(name = "alive")
     private Boolean alive;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", fetch = FetchType.EAGER)
     @JsonIgnoreProperties("author")
     private List<Book> books;
 
@@ -40,7 +40,11 @@ public class Author {
     }
 
     public Author() {
-        super();
+
+    }
+
+    public Author(int id) {
+        this.id = id;
     }
 
     public Author(String firstName, String lastName, String email, Boolean alive){

@@ -53,5 +53,4 @@ public class AuthorController {
         this.authorRepository.delete(authorToDelete);
         return ResponseEntity.ok(authorToDelete);
     }
-
 }
